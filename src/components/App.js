@@ -26,11 +26,33 @@ const data = {
     'Adventures of Shaktiman'
   ]
 }
+
+
+let dataArray = Object.entries(data)
+let yearsArray = dataArray.map((i)=>{
+    return(i[0])
+})
+function options(){
+ let optionsArray= yearsArray.map((i)=>{
+    return <option value={null}>{i}</option>
+})
+    
+  }
+}
+
+
+
 const App = () => {
 
   return (
     <div id="main">
-      
+      <select>
+    {options()}
+          
+  
+      </select>
+
+<div  id="selected-year"></div>
     </div>
   )
 }
